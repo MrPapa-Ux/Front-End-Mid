@@ -1,28 +1,49 @@
 /* src/App.css */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-header {
+.header {
   background-color: #282c34;
   padding: 20px;
   color: white;
 }
 
-h1 {
+.profile-image {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.about,
+.skills,
+.achievements,
+.footer {
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 600px;
+  text-align: left;
+}
+
+h2 {
   color: #61dafb;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  background-color: #61dafb;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.skills ul,
+.achievements ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-button:hover {
-  background-color: #21a1f1;
+.skills li,
+.achievements li {
+  background: #eee;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-size: 14px;
 }
