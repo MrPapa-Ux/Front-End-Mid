@@ -1,15 +1,19 @@
-import logo from "./logo.svg";
+// src/App.js
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to My Custom React App!</h1>
-        <p>This is a custom design using React.</p>
-        <button onClick={() => alert("Button Clicked!")}>Click Me</button>
+        <h1>React Counter</h1>
+        <p>Current count: {count}</p>
+        <button onClick={() => setCount(count + 1)}>Increase Count</button>
       </header>
     </div>
   );
 }
+
 export default App;
