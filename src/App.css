@@ -15,20 +15,22 @@
   border-radius: 50%;
 }
 
+/* Untuk About, Skills, Achievements, dan Footer */
 .about,
 .skills,
 .achievements,
 .footer {
-  margin: 20px auto;
+  margin: 20px; /* Menghapus 'auto' untuk tidak membuatnya terpusat */
   padding: 10px;
-  max-width: 600px;
-  text-align: left;
+  width: 100%; /* Pastikan elemen mengisi seluruh lebar */
+  text-align: left; /* Teks rata kiri */
 }
 
 h2 {
-  color: #61dafb;
+  color: #61dafb; /* Warna biru untuk judul */
 }
 
+/* Styling untuk Skills dan Achievements */
 .skills ul,
 .achievements ul {
   list-style-type: none;
@@ -42,6 +44,7 @@ h2 {
   margin: 5px 0;
 }
 
+/* Styling untuk Footer */
 .footer {
   background-color: #f0f0f0;
   padding: 10px;

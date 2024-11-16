@@ -8,13 +8,17 @@
   margin-top: 20px; /* Jarak dengan elemen di atas */
 }
 
+/* Styling untuk text konten tentang saya */
 .about-text {
-  max-width: 800px; /* Membatasi lebar konten */
-  margin: 0 auto; /* Menyusun konten di tengah */
+  width: 100%; /* Lebar penuh */
   padding: 30px; /* Memberikan padding pada teks */
   background-color: #f9f9f9; /* Memberikan latar belakang abu-abu terang */
+  border-left: 5px solid #61dafb; /* Garis border kiri untuk efek kotak */
   border-radius: 10px; /* Sudut melengkung */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  color: #555; /* Warna teks */
+  margin: 0; /* Menghilangkan margin otomatis */
+  text-align: left; /* Teks rata kiri */
 }
 
 .about-text h2 {
