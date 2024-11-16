@@ -10,8 +10,37 @@
   background-color: #282c34;
   color: white;
   text-align: center;
+  position: relative;
+  overflow: hidden; /* Memastikan api tidak melampaui header */
 }
 
+/* Efek api menggunakan pseudo-element ::before */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #ff9a00, #ff5500, #d83100, #ff9000);
+  background-size: 400% 400%; /* Memperbesar latar belakang untuk animasi */
+  animation: flameAnimation 6s ease-in-out infinite; /* Animasi api bergerak */
+  z-index: -1; /* Membuat efek api berada di belakang konten */
+}
+
+@keyframes flameAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Styling untuk gambar profil */
 .profile-container {
   margin-right: 20px; /* Memberikan ruang antara gambar dan teks */
 }
@@ -23,6 +52,7 @@
   object-fit: cover; /* Memastikan gambar terpotong dengan baik */
 }
 
+/* Styling untuk teks header */
 .header-text {
   max-width: 500px; /* Membatasi lebar teks agar tidak terlalu lebar */
 }
