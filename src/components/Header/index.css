@@ -9,40 +9,11 @@
   padding: 40px 20px; /* Padding lebih besar untuk header */
   background-color: #282c34;
   color: white;
-  text-align: center;
+  text-align: left; /* Rata kiri teks di header */
   position: relative;
-  overflow: hidden; /* Memastikan ombak tidak melampaui header */
-}
-
-/* Efek Ombak menggunakan pseudo-element ::before */
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(0, 255, 255, 0.4),
-    rgba(0, 0, 255, 0.6)
-  ); /* Gradien ombak */
-  background-size: 200% 200%; /* Memperbesar latar belakang untuk animasi */
-  animation: waveAnimation 6s ease-in-out infinite; /* Animasi ombak bergerak */
-  z-index: -1; /* Membuat efek ombak berada di belakang konten */
-}
-
-/* Animasi untuk efek ombak */
-@keyframes waveAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  width: 100%; /* Menjamin lebar header penuh */
+  box-sizing: border-box; /* Memastikan padding dihitung dalam lebar */
+  overflow: visible; /* Menghilangkan overflow agar konten tidak terpotong */
 }
 
 /* Styling untuk gambar profil */
@@ -60,6 +31,7 @@
 /* Styling untuk teks header */
 .header-text {
   max-width: 500px; /* Membatasi lebar teks agar tidak terlalu lebar */
+  text-align: left; /* Menjaga agar teks tetap rata kiri */
 }
 
 .header-text h1 {
@@ -77,8 +49,8 @@
 /* Responsif pada layar kecil */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    text-align: center; /* Membuat header menjadi kolom dan teks rata tengah pada layar kecil */
+    flex-direction: column; /* Membuat header menjadi kolom */
+    text-align: center; /* Membuat teks rata tengah pada layar kecil */
   }
 
   .profile-container {
