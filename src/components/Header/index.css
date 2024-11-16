@@ -1,0 +1,65 @@
+/* src/components/Header/index.css */
+
+/* Styling untuk header */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 20px; /* Padding lebih besar untuk header */
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+}
+
+.profile-container {
+  margin-right: 20px; /* Memberikan ruang antara gambar dan teks */
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Membuat gambar profil berbentuk bulat */
+  object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+}
+
+.header-text {
+  max-width: 500px; /* Membatasi lebar teks agar tidak terlalu lebar */
+}
+
+.header-text h1 {
+  font-size: 2.5rem; /* Ukuran font lebih besar untuk nama */
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ddd; /* Warna lebih terang untuk deskripsi pekerjaan */
+}
+
+/* Responsif pada layar kecil */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center; /* Membuat header menjadi kolom dan teks rata tengah pada layar kecil */
+  }
+
+  .profile-container {
+    margin-bottom: 20px; /* Memberikan jarak antara gambar dan teks */
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .header-text h1 {
+    font-size: 2rem; /* Ukuran font lebih kecil pada layar kecil */
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+}
