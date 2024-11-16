@@ -1,0 +1,31 @@
+/* src/components/About/index.css */
+
+/* Styling untuk About section */
+.about {
+  width: 100%; /* Menggunakan lebar penuh */
+  padding: 40px 20px;
+  background-color: white; /* Latar belakang putih */
+  margin-top: 20px; /* Jarak dengan elemen di atas */
+}
+
+.about-text {
+  max-width: 800px; /* Membatasi lebar konten */
+  margin: 0 auto; /* Menyusun konten di tengah */
+  padding: 20px;
+  background-color: #f9f9f9; /* Memberikan latar belakang abu-abu terang */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+.about-text h2 {
+  font-size: 2.5rem; /* Ukuran font lebih besar untuk judul */
+  color: #61dafb; /* Warna biru untuk judul */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem; /* Ukuran font untuk deskripsi */
+  color: #555; /* Warna abu-abu untuk teks */
+  line-height: 1.8; /* Jarak antar baris */
+}
