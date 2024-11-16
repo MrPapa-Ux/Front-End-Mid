@@ -11,10 +11,10 @@
   color: white;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Memastikan api tidak melampaui header */
+  overflow: hidden; /* Memastikan ombak tidak melampaui header */
 }
 
-/* Efek api menggunakan pseudo-element ::before */
+/* Efek Ombak menggunakan pseudo-element ::before */
 .header::before {
   content: "";
   position: absolute;
@@ -22,13 +22,18 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, #ff9a00, #ff5500, #d83100, #ff9000);
-  background-size: 400% 400%; /* Memperbesar latar belakang untuk animasi */
-  animation: flameAnimation 6s ease-in-out infinite; /* Animasi api bergerak */
-  z-index: -1; /* Membuat efek api berada di belakang konten */
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.4),
+    rgba(0, 0, 255, 0.6)
+  ); /* Gradien ombak */
+  background-size: 200% 200%; /* Memperbesar latar belakang untuk animasi */
+  animation: waveAnimation 6s ease-in-out infinite; /* Animasi ombak bergerak */
+  z-index: -1; /* Membuat efek ombak berada di belakang konten */
 }
 
-@keyframes flameAnimation {
+/* Animasi untuk efek ombak */
+@keyframes waveAnimation {
   0% {
     background-position: 0% 50%;
   }
