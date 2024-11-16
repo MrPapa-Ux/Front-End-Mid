@@ -11,7 +11,7 @@
 .about-text {
   max-width: 800px; /* Membatasi lebar konten */
   margin: 0 auto; /* Menyusun konten di tengah */
-  padding: 20px;
+  padding: 30px; /* Memberikan padding pada teks */
   background-color: #f9f9f9; /* Memberikan latar belakang abu-abu terang */
   border-radius: 10px; /* Sudut melengkung */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
@@ -28,4 +28,24 @@
   font-size: 1.2rem; /* Ukuran font untuk deskripsi */
   color: #555; /* Warna abu-abu untuk teks */
   line-height: 1.8; /* Jarak antar baris */
+}
+
+/* Menambahkan aturan responsif */
+@media (max-width: 768px) {
+  .about {
+    padding: 20px; /* Mengurangi padding untuk layar kecil */
+  }
+
+  .about-text {
+    max-width: 100%; /* Lebar maksimal 100% pada layar kecil */
+    padding: 15px; /* Mengurangi padding untuk layar kecil */
+  }
+
+  .about-text h2 {
+    font-size: 2rem; /* Ukuran font lebih kecil pada layar kecil */
+  }
+
+  .about-text p {
+    font-size: 1rem; /* Ukuran font lebih kecil pada layar kecil */
+  }
 }
