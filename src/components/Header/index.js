@@ -10,7 +10,7 @@ function Header() {
         {/* Menambahkan video latar belakang */}
         <video autoPlay muted loop>
           <source
-            src="/videos/Five Nights at Freddy's 2 Song - The Living Tombstone (FNAF2).mp4"
+            src="/videos/Five Nights at Freddy's 2 Song - The Living Tombstone (FNAF2).mp4 (1)"
             type="video/mp4"
           />
         </video>
