@@ -1,6 +1,5 @@
-// src/components/About/index.js
 import React from "react";
-import "./index.css"; // Mengimpor styling khusus untuk About
+import "./index.css"; // Import custom styling for About
 
 function About() {
   return (

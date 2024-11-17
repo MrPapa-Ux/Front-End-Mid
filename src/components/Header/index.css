@@ -1,68 +1,57 @@
-/* Styling untuk header */
+/* Styling for header */
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
   color: white;
   text-align: left;
   position: relative;
   width: 100%;
-  height: 100vh; /* Mengatur header agar mengambil seluruh tinggi layar */
+  height: 100vh; /* Set header to take full screen height */
   overflow: hidden;
-  border-bottom: 4px solid #61dafb; /* Garis bawah biru */
+  border-bottom: 4px solid #61dafb; /* Blue bottom border */
+  background-color: #282c34; /* Solid background color */
 }
 
-/* Menambahkan video sebagai background tetapi tidak full */
-.header video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Video akan menutupi lebar header */
-  height: 60%; /* Membuat video hanya mengambil 60% tinggi layar */
-  object-fit: cover; /* Memastikan video memenuhi elemen tanpa distorsi */
-  z-index: -1; /* Menempatkan video di belakang konten header */
-  pointer-events: none; /* Menonaktifkan interaksi dengan video */
-  filter: blur(5px); /* Menambahkan efek blur pada video */
-}
-
-/* Styling untuk gambar profil */
+/* Styling for profile image */
 .profile-container {
   margin-right: 20px;
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid transparent;
   transition: border 0.3s ease, transform 0.3s ease;
 }
 
-/* Efek Hover pada gambar profil */
+/* Hover effect for profile image */
 .profile-image:hover {
   border: 5px solid #61dafb;
-  transform: scale(1.1); /* Membesarkan gambar sedikit saat hover */
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
 
-/* Styling untuk teks header */
+/* Styling for header text */
 .header-text {
-  max-width: 500px;
+  flex-grow: 1;
   text-align: left;
+  margin-right: 20px; /* Add some space between text and slideshow */
 }
 
 .header-text h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin: 0;
   color: #61dafb;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan efek shadow */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
 
 .header-text p {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin-top: 10px;
   color: #ddd;
   transition: color 0.3s ease;
@@ -73,7 +62,33 @@
   cursor: pointer;
 }
 
-/* Responsif pada layar kecil */
+/* Container for slideshow */
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px; /* Increased width */
+  height: 500px; /* Increased height */
+  margin-left: auto; /* Align to the right */
+  position: relative;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 1.5s ease-in-out;
+  opacity: 0; /* Start with image hidden */
+}
+
+/* Ensure current image is visible */
+.slideshow-image.fade-in {
+  opacity: 1; /* Fade in current image */
+}
+
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -85,8 +100,12 @@
   }
 
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .header-text {
+    margin-right: 0; /* Remove margin on smaller screens */
   }
 
   .header-text h1 {
@@ -95,5 +114,11 @@
 
   .header-text p {
     font-size: 1rem;
+  }
+
+  .slideshow-container {
+    width: 350px; /* Adjust width for smaller screens */
+    height: 350px; /* Adjust height for smaller screens */
+    margin-left: 0; /* Center on smaller screens */
   }
 }

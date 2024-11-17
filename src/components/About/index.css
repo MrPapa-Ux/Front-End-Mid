@@ -1,34 +1,41 @@
-/* src/components/About/index.css */
-
-/* Styling untuk About section */
+/* Styling for About section */
 .about {
-  width: 100%; /* Menggunakan lebar penuh */
-  padding: 40px 20px;
-  background-color: white; /* Latar belakang putih */
-  margin-top: 20px; /* Jarak dengan elemen di atas */
+  width: 100%; /* Use full width */
+  padding: 50px 20px; /* Add more padding */
+  background-color: white; /* White background */
+  margin-top: 30px; /* Distance from the element above */
+  text-align: center; /* Center the text */
 }
 
-/* Styling untuk text konten tentang saya */
+/* Styling for text content in the About section */
 .about-text {
-  width: 100%; /* Lebar penuh */
-  max-width: 800px; /* Menetapkan lebar maksimal agar konten tidak terlalu lebar */
-  padding: 30px; /* Memberikan padding pada teks */
-  background-color: #f9f9f9; /* Memberikan latar belakang abu-abu terang */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
-  color: #555; /* Warna teks */
-  margin: 0 auto; /* Menyusun konten di tengah layar */
-  text-align: left; /* Teks rata kiri */
+  width: 100%; /* Full width */
+  max-width: 800px; /* Set a max width */
+  padding: 40px; /* Add padding */
+  background-color: #f9f9f9; /* Light gray background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  color: #333; /* Darker text color for better readability */
+  margin: 0 auto; /* Center the content */
+  text-align: left; /* Left-align the text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for about-text */
+.about-text:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .about-text h2 {
-  font-size: 2.5rem; /* Ukuran font lebih besar untuk judul */
-  color: #61dafb; /* Warna biru untuk judul */
+  font-size: 2.5rem; /* Larger font size for title */
+  color: #61dafb; /* Blue color for title */
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .about-text p {
-  font-size: 1.2rem; /* Ukuran font untuk deskripsi */
-  color: #555; /* Warna abu-abu untuk teks */
-  line-height: 1.8; /* Jarak antar baris */
+  font-size: 1.2rem; /* Font size for description */
+  color: #333; /* Darker gray for text */
+  line-height: 1.8; /* Line spacing */
 }
