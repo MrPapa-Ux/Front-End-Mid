@@ -5,20 +5,26 @@
   justify-content: flex-start;
   align-items: center;
   padding: 40px 20px;
-  background-color: #282c34;
   color: white;
   text-align: left;
   position: relative;
   width: 100%;
-  box-sizing: border-box;
-  overflow: visible;
-  border-bottom: 4px solid #61dafb;
+  height: 100vh; /* Mengatur header agar mengambil seluruh tinggi layar */
+  overflow: hidden;
+  border-bottom: 4px solid #61dafb; /* Garis bawah biru */
 }
 
-/* Gaya untuk gambar slider */
-.slider-image {
-  width: 100%; /* Memastikan gambar memenuhi lebar slider */
-  height: auto; /* Menjaga rasio aspek gambar */
+/* Menambahkan video sebagai background tetapi tidak full */
+.header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Video akan menutupi lebar header */
+  height: 60%; /* Membuat video hanya mengambil 60% tinggi layar */
+  object-fit: cover; /* Memastikan video memenuhi elemen tanpa distorsi */
+  z-index: -1; /* Menempatkan video di belakang konten header */
+  pointer-events: none; /* Menonaktifkan interaksi dengan video */
+  filter: blur(5px); /* Menambahkan efek blur pada video */
 }
 
 /* Styling untuk gambar profil */
@@ -38,7 +44,7 @@
 /* Efek Hover pada gambar profil */
 .profile-image:hover {
   border: 5px solid #61dafb;
-  transform: scale(1.1);
+  transform: scale(1.1); /* Membesarkan gambar sedikit saat hover */
 }
 
 /* Styling untuk teks header */
@@ -52,7 +58,7 @@
   font-weight: bold;
   margin: 0;
   color: #61dafb;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan efek shadow */
 }
 
 .header-text p {
