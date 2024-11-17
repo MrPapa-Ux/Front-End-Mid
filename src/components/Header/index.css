@@ -1,60 +1,87 @@
-/* src/components/Header/index.css */
-
 /* Styling untuk header */
 .header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 40px 20px; /* Padding lebih besar untuk header */
-  background-color: #282c34;
+  padding: 40px 20px;
   color: white;
-  text-align: left; /* Rata kiri teks di header */
+  text-align: left;
   position: relative;
-  width: 100%; /* Menjamin lebar header penuh */
-  box-sizing: border-box; /* Memastikan padding dihitung dalam lebar */
-  overflow: visible; /* Menghilangkan overflow agar konten tidak terpotong */
+  width: 100%;
+  height: 100vh; /* Mengatur header agar mengambil seluruh tinggi layar */
+  overflow: hidden;
+  border-bottom: 4px solid #61dafb; /* Garis bawah biru */
+}
+
+/* Menambahkan video sebagai background tetapi tidak full */
+.header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Video akan menutupi lebar header */
+  height: 60%; /* Membuat video hanya mengambil 60% tinggi layar */
+  object-fit: cover; /* Memastikan video memenuhi elemen tanpa distorsi */
+  z-index: -1; /* Menempatkan video di belakang konten header */
+  pointer-events: none; /* Menonaktifkan interaksi dengan video */
+  filter: blur(5px); /* Menambahkan efek blur pada video */
 }
 
 /* Styling untuk gambar profil */
 .profile-container {
-  margin-right: 20px; /* Memberikan ruang antara gambar dan teks */
+  margin-right: 20px;
 }
 
 .profile-image {
   width: 150px;
   height: 150px;
-  border-radius: 50%; /* Membuat gambar profil berbentuk bulat */
-  object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid transparent;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+/* Efek Hover pada gambar profil */
+.profile-image:hover {
+  border: 5px solid #61dafb;
+  transform: scale(1.1); /* Membesarkan gambar sedikit saat hover */
 }
 
 /* Styling untuk teks header */
 .header-text {
-  max-width: 500px; /* Membatasi lebar teks agar tidak terlalu lebar */
-  text-align: left; /* Menjaga agar teks tetap rata kiri */
+  max-width: 500px;
+  text-align: left;
 }
 
 .header-text h1 {
-  font-size: 2.5rem; /* Ukuran font lebih besar untuk nama */
+  font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
+  color: #61dafb;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan efek shadow */
 }
 
 .header-text p {
   font-size: 1.2rem;
   margin-top: 10px;
-  color: #ddd; /* Warna lebih terang untuk deskripsi pekerjaan */
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.header-text p:hover {
+  color: #fff;
+  cursor: pointer;
 }
 
 /* Responsif pada layar kecil */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column; /* Membuat header menjadi kolom */
-    text-align: center; /* Membuat teks rata tengah pada layar kecil */
+    flex-direction: column;
+    text-align: center;
   }
 
   .profile-container {
-    margin-bottom: 20px; /* Memberikan jarak antara gambar dan teks */
+    margin-bottom: 20px;
   }
 
   .profile-image {
@@ -63,7 +90,7 @@
   }
 
   .header-text h1 {
-    font-size: 2rem; /* Ukuran font lebih kecil pada layar kecil */
+    font-size: 2rem;
   }
 
   .header-text p {
