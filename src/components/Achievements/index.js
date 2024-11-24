@@ -3,9 +3,10 @@ import React from "react";
 
 function Achievements() {
   const achievements = [
-    { title: "Hackathon Winner", year: 2022 },
-    { title: "Best Developer Award", year: 2021 },
-    { title: "Open Source Contributor", year: 2023 },
+    { title: "The best Joker" },
+    { title: "The best doing nothing" },
+    { title: "The best at looking someone" },
+    { title: "The best of the worst" },
   ];
 
   return (
@@ -14,7 +15,7 @@ function Achievements() {
       <ul>
         {achievements.map((achievement, index) => (
           <li key={index}>
-            <strong>{achievement.title}</strong> - {achievement.year}
+            <strong>{achievement.title}</strong>
           </li>
         ))}
       </ul>
