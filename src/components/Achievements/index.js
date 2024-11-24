@@ -1,6 +1,6 @@
 // src/components/Achievements.js
 import React from "react";
-import "./index.css";
+import "./achivements.css";
 
 function Achievements() {
   const achievements = [

@@ -1,0 +1,41 @@
+/* Styling for About section */
+.about {
+  width: 100%; /* Use full width */
+  padding: 50px 20px; /* Add more padding */
+  background-color: white; /* White background */
+  margin-top: 30px; /* Distance from the element above */
+  text-align: center; /* Center the text */
+}
+
+/* Styling for text content in the About section */
+.about-text {
+  width: 100%; /* Full width */
+  max-width: 800px; /* Set a max width */
+  padding: 40px; /* Add padding */
+  background-color: #f9f9f9; /* Light gray background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  color: #333; /* Darker text color for better readability */
+  margin: 0 auto; /* Center the content */
+  text-align: left; /* Left-align the text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for about-text */
+.about-text:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.about-text h2 {
+  font-size: 2.5rem; /* Larger font size for title */
+  color: #61dafb; /* Blue color for title */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem; /* Font size for description */
+  color: #333; /* Darker gray for text */
+  line-height: 1.8; /* Line spacing */
+}

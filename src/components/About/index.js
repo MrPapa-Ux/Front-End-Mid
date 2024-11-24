@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css"; // Import custom styling for About
+import "./about.css"; // Import custom styling for About
 
 function About() {
   return (
@@ -7,10 +7,10 @@ function About() {
       <div className="about-text">
         <h2>About Me</h2>
         <p>
-          I am a passionate developer with experience in creating dynamic web
-          applications. I specialize in front-end development, but I am also
-          familiar with full-stack technologies. I strive to write clean and
-          efficient code, always learning and improving my skills.
+          I'm a person who likes to imagine and has quite a hard time learning
+          to code. but I'm still trying to study and learn even though my brain
+          feels like it's going to melt. because that's what college life is
+          like
         </p>
       </div>
     </section>

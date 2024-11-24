@@ -4,8 +4,8 @@ import React from "react";
 function Footer() {
   return (
     <footer className="footer">
-      <p>Contact: yourname@example.com</p>
-      <p>&copy; {new Date().getFullYear()} Your Name</p>
+      <p>Contact: glenvidi@gmail.com</p>
+      <p>&copy; {new Date().getFullYear()} Glenvidi</p>
     </footer>
   );
 }
