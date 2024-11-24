@@ -17,17 +17,24 @@
 
 /* Untuk About, Skills, Achievements, dan Footer */
 .about,
+.hobby,
 .skills,
 .achievements,
 .footer {
-  margin: 20px; /* Menghapus 'auto' untuk tidak membuatnya terpusat */
+  margin: 20px; /* Margin yang sama untuk semua bagian */
   padding: 10px;
-  width: 100%; /* Pastikan elemen mengisi seluruh lebar */
+  width: 100%; /* Mengisi seluruh lebar */
   text-align: left; /* Teks rata kiri */
 }
 
 h2 {
   color: #61dafb; /* Warna biru untuk judul */
+}
+
+/* Styling untuk Hobbies */
+.hobby ul {
+  list-style-type: disc;
+  padding-left: 30px; /* Memberikan indentasi pada list */
 }
 
 /* Styling untuk Skills dan Achievements */

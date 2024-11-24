@@ -2,6 +2,7 @@
 import React from "react";
 import Header from "./components/Header";
 import About from "./components/About";
+import Hobby from "./components/Hobby";
 import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
 import Footer from "./components/Footer";
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <About />
+      <Hobby />
       <Skills />
       <Achievements />
       <Footer />

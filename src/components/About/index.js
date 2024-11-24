@@ -1,5 +1,4 @@
 import React from "react";
-import "./about.css"; // Import custom styling for About
 
 function About() {
   return (
